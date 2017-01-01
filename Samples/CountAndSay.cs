@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Samples
 {
-    public class Sample1
+    public class CountAndSay
     {
 
         //{:expected "111221" :arguments["three 1, then two 2's, then one 1"]}

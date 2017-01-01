@@ -10,7 +10,7 @@ namespace Samples
     {
         static void Main(string[] args)
         {
-            Sample1.Run();
+            CountAndSay.Run();
         }
     }
 }
