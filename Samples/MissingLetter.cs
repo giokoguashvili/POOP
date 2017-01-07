@@ -11,14 +11,29 @@ namespace Samples
     //{
     //    public static void Main(string[] args)
     //    {
-            //return new MissingLetter(
-            //        new ConsecutiveLetters(
-            //            ['a', 'b', 'c', 'd', 'f']
-            //        )
-            //    ).Result();
+    //return new MissingLetter(
+    //        new ConsecutiveLetters(
+    //            ['a', 'b', 'c', 'd', 'f']
+    //        )
+    //    ).Result();
     //    }
     //}
 
+    public static class MissingLetterSample
+    {
+        public static void Run()
+        {
+            Console.WriteLine(
+                new MissingLetter(
+                        new ConsecutiveLetters(
+                            new[] { 'a', 'b', 'c', 'd', 'f' }
+                        )
+                 ).Result()
+            );
+
+            Console.ReadLine();
+        }
+    }
     public class MissingLetter
     {
         public ConsecutiveLetters _consecutiveLetters;
@@ -70,7 +85,7 @@ namespace Samples
         {
             var firstLetter = _letters.First().ToString();
             return firstLetter.ToUpper() == firstLetter;
-        } 
+        }
 
     }
 }

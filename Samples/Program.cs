@@ -11,16 +11,8 @@ namespace Samples
         static void Main(string[] args)
         {
             //CountAndSay.Run();
-
-            Console.WriteLine(
-                new MissingLetter(
-                        new ConsecutiveLetters(
-                            new []{ 'a', 'b', 'c', 'd', 'f' }
-                        )
-                 ).Result()
-            );
-
-            Console.ReadLine();
+            //MissingLetterSample.Run();
+            BitCountingSample.Run();
         }
     }
 }
