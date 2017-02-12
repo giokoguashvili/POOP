@@ -1,4 +1,5 @@
 using System;
+using static System.Console;
 
 namespace ConsoleApp
 {
@@ -6,7 +7,15 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var account = new Account(100);
+            WriteLine(
+                    account.Balance()
+                );
+
+            account.Deposit(50);
+            WriteLine(
+                    account.Deposit(200).Balance()
+                );
         }
     }
 }
