@@ -16,6 +16,15 @@ namespace ConsoleApp
             WriteLine(
                     account.Deposit(200).Balance()
                 );
+
+            new Application(
+                new UserInterface(
+                    new DomainServices(
+                        new AccountService(),
+                        new UserService()
+                    )
+                )
+            ).Run(Exit.Never);
         }
     }
 }
