@@ -8,7 +8,8 @@ public class UserInterface
 
     public bool RetrieveCommand()
     {
-        Console.ReadLine();
+        var commandStr = Console.ReadLine();
+        
         return true;
     }
 
