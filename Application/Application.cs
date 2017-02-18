@@ -4,8 +4,8 @@ public class Application {
         this._ui = ui;
     }
     public void Run() {
-        while (ui) {
-
+        while (ui.RetrieveCommand()) {
+            this._ui.ExecuteCommand();
         }
     }
 }
