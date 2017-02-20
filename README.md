@@ -2,7 +2,9 @@
 
 ```
   new Application(
-    new Data(),
-    new User()
+    new UserInterface(
+      new Data(),
+      new User()
+    )
   ).Run()
 ```
