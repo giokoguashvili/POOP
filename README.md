@@ -3,8 +3,12 @@
 ```
   new Application(
     new UserInterface(
-      new Data(),
-      new User()
+      new ApplicationServices(
+        new DomainServices(
+          new UserRepository(),
+          new ProductRepository()
+        )
+      )
     )
   ).Run()
 ```
