@@ -6,7 +6,8 @@
       new ApplicationServices(
         new DomainServices(
           new UserRepository(),
-          new ProductRepository()
+          new ProductRepository(),
+          new OrderRepository()
         )
       )
     )
