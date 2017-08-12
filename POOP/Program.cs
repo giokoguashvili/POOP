@@ -1,30 +1,56 @@
 using System;
-using static System.Console;
 
-namespace ConsoleApp
+public class Program
 {
-    class Program
+    public interface IDbModel { }
+    public interface IDmModel { }
+
+    public class DbMode : IDbModel { }
+    public class DmModel : IDmModel { }
+    public class Middle { }
+
+    public interface IRule { }
+    public interface IRule<in TInput, out TOutput> : IRule
+        where TInput : IDmModel
+        where TOutput : IDbModel
     {
-        static void Main(string[] args)
+        TOutput Apply(TInput elem);
+    }
+
+
+    public abstract class Rule<TDmModel, TMiddle, TDb> : IRule<IDmModel, TDb>
+        where TDmModel : IDmModel
+        where TDb : IDbModel
+    {
+        private readonly Func<TDmModel, TMiddle> _rule;
+        protected Rule(Func<TDmModel, TMiddle> rule)
         {
-            var account = new Account(100);
-            WriteLine(
-                    account.Balance()
-                );
-
-            account.Deposit(50);
-            WriteLine(
-                    account.Deposit(200).Balance()
-                );
-
-            // new Application(
-            //     new UserInterface(
-            //         new DomainServices(
-            //             new AccountService(),
-            //             new UserService()
-            //         )
-            //     )
-            // ).Run(Exit.Never);
+            _rule = rule;
         }
+        protected abstract TDb Apply(TMiddle transformedMessage);
+        public TDb Apply(IDmModel elem)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+    public class RuleA : Rule<DmModel, Middle, DbMode>
+    {
+        public RuleA(Func<DmModel, Middle> rule) : base(rule) { }
+        protected override DbMode Apply(Middle transformedMessage)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class RuleB : RuleA
+    {
+        public RuleB() : base((dm) => new Middle()) { }
+    }
+
+    public static void Main()
+    {
+        var ruleB = (IRule<IDmModel, IDbModel>)new RuleB();
     }
 }

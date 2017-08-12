@@ -5,17 +5,28 @@
 /// </summary>
 public class Infrastructure
 {
-    public class Curried<T1, T2, TLast, TResult>
+    public static class Extensions
+    {
+        public static Curried1<T1, T2, TLast, TResult> Curried<T1, T2, TLast, TResult>(Func<T1, T2, TLast, TResult> func)
+        {
+            return new Curried1<T1, T2, TLast, TResult>(func);
+        }
+    }
+    public class Curried1<T1, T2, TLast, TResult>
     {
         private readonly Func<T1, T2, TLast, TResult> _func;
-        public Curried(Func<T1, T2, TLast, TResult> func)
+        public Curried1(Func<T1, T2, TLast, TResult> func)
         {
             _func = func;
         }
 
-        public Invocable<TLast, TResult> Curry(T2 param2)
+        public Curried<T2, TLast, TResult> Curry(T1 param1)
         {
-            return new Invocable<TLast, TResult>((lastParam) => _funcs());
+            return new Curried<T2, TLast, TResult>((param2, lastParam) => _func(param1, param2, lastParam));
+        }
+        public Invocable<TLast, TResult> Curry(T1 param1, T2 param2)
+        {
+            return new Invocable<TLast, TResult>((lastParam) => _func(param1, param2, lastParam));
         }
     }
 
@@ -32,6 +43,11 @@ public class Infrastructure
         {
             return new Invocable<TLast, TResult>((lastParam) => _func(par1, lastParam));
         }
+
+        public TResult Invoke(T1 param1, TLast lastParam)
+        {
+            return _func(param1, lastParam);
+        }
     }
 
     public class Invocable<TLast, TResult>
@@ -45,6 +61,21 @@ public class Infrastructure
         public TResult Invoke(TLast lastParam)
         {
             return _func(lastParam);
+        }
+    }
+
+    public class Bar { }
+
+    public class Foo<T>
+    {
+        public Foo(T data) {}
+    }
+
+    class MyClass
+    {
+        public MyClass()
+        {
+
         }
     }
 }
