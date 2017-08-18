@@ -13,9 +13,6 @@ namespace ConsoleApp
 
             var strings = new List<string>() {"abc", "bac", "abc", "d", "et", "d", "et"};
             //StringsWithIdenticalLetters
-
-
-
             WriteLine(
                 new ResultView(
                     new CoincidingStringsIndexes(
