@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  unit-tests:
+    image: microsoft/dotnet:2.0.0-sdk
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: 
+      - /bin/bash
+      - /src/Scripts/run-tests.sh
+
+  elasticsearch:
+    image: elasticsearch:latest
+    volumes:
+      - ./PeopleSearch.Web.Api.Tests/esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"

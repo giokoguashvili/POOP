@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  peoplesearch.web.api:
+    image: peoplesearch.web.api
+    build:
+      context: ./PeopleSearch.Web.Api
+      dockerfile: Dockerfile
