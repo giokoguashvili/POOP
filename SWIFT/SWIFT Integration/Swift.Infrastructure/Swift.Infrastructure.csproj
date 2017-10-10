@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Swift.Infrastructure</RootNamespace>
+    <AssemblyName>Swift.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\AbstractDictionary.cs" />
+    <Compile Include="Infrastructure\BoxExtensions.cs" />
+    <Compile Include="Infrastructure\Box\Abstract\Mandatory.cs" />
+    <Compile Include="Infrastructure\Box\Abstract\Optional.cs" />
+    <Compile Include="Infrastructure\Box\Concrete\LazyMandator.cs" />
+    <Compile Include="Infrastructure\Box\Concrete\Mandator.cs" />
+    <Compile Include="Infrastructure\Box\Concrete\Option.cs" />
+    <Compile Include="Infrastructure\Box\Concrete\Pipe.cs" />
+    <Compile Include="Infrastructure\Box\Filtered.cs" />
+    <Compile Include="Infrastructure\Box\FirstOptional.cs" />
+    <Compile Include="Infrastructure\Box\Interfaces\IBox.cs" />
+    <Compile Include="Infrastructure\Box\Interfaces\IMandatory.cs" />
+    <Compile Include="Infrastructure\Box\Interfaces\IOptional.cs" />
+    <Compile Include="Infrastructure\Box\Interfaces\IPipe.cs" />
+    <Compile Include="Infrastructure\Box\Interfaces\IResult.cs" />
+    <Compile Include="Infrastructure\Box\Mapped.cs" />
+    <Compile Include="Infrastructure\Box.cs" />
+    <Compile Include="Infrastructure\ExecutedCommand.cs" />
+    <Compile Include="Infrastructure\ICommand.cs" />
+    <Compile Include="Infrastructure\IContent.cs" />
+    <Compile Include="Infrastructure\Iterable\Collection.cs" />
+    <Compile Include="Infrastructure\Iterable\IIterable.cs" />
+    <Compile Include="Infrastructure\Iterable\Iterable.cs" />
+    <Compile Include="Infrastructure\IView.cs" />
+    <Compile Include="Infrastructure\Join.cs" />
+    <Compile Include="Infrastructure\Splited.cs" />
+    <Compile Include="Infrastructure\SplitedString.cs" />
+    <Compile Include="Infrastructure\Take.cs" />
+    <Compile Include="Infrasturture.V2\Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

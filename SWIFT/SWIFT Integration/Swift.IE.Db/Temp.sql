@@ -1,0 +1,4 @@
+﻿CREATE TABLE [SWIFT].[Temp]
+(
+	[Title] NVARCHAR(50) NOT NULL PRIMARY KEY
+)

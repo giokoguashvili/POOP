@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{957903B7-B00B-4F8E-9677-07D00E388504}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Swift.AltaSoftware.Wrapper</RootNamespace>
+    <AssemblyName>Swift.AltaSoftware.Wrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SWIFTFramework, Version=2017.2.125.0, Culture=neutral, PublicKeyToken=c2e8ae8887ee9ba3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SWIFTFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.2.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.2.0\lib\netstandard1.1\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.2.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSourceForTests\TextFileDataSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Swift\AsSwiftMessage.cs" />
+    <Compile Include="Swift\BlockWithValidationRules.cs" />
+    <Compile Include="Swift\Common\BankLTAdress.cs" />
+    <Compile Include="Swift\Common\CuttedWithFirstFountTag.cs" />
+    <Compile Include="Swift\Common\Optional.cs" />
+    <Compile Include="Swift\Common\SplitedByLines.cs" />
+    <Compile Include="Swift\Common\SwiftAmount.cs" />
+    <Compile Include="Swift\Common\SwiftDateTime.cs" />
+    <Compile Include="Swift\Common\SwiftMessageBank.cs" />
+    <Compile Include="Swift\Common\SwiftMessageStartSymbols.cs" />
+    <Compile Include="Swift\Common\SwiftMessageType.cs" />
+    <Compile Include="Swift\Common\Validators\MaximumLength.cs" />
+    <Compile Include="Swift\Common\Validators\RangeValidator.cs" />
+    <Compile Include="Swift\Common\Validators\SwiftTagValidator.cs" />
+    <Compile Include="Swift\IAsSwiftMessage.cs" />
+    <Compile Include="Swift\JsonSwiftMessage.cs" />
+    <Compile Include="Swift\MT\103\MT103_STP_Type.cs" />
+    <Compile Include="Swift\MT\103\MT103_REMIT_Type.cs" />
+    <Compile Include="Swift\MT\103\MT103_DEFAULT_Type.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_REMIT\AsMT103_REMIT.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_REMIT\Tags\77T\EnvelopeContents_77T.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_REMIT\Tags\77T\OptionT.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\AsMT103_STP.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\52A\OrderingInstitution_52A.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\53a\SendersCorrespondent_53a.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\54A\ReceiversCorrespondent_54A.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\55A\ThirdReimbursementInstitution_55A.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\56A\IntermediaryInstitution_56A.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_STP\Tags\57A\AccountWithInstitution_57A.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71F\SendersCharges_71F.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71G\ReceiversCharges_71G.cs" />
+    <Compile Include="Swift\ParsedSwiftMessage.cs" />
+    <Compile Include="Swift\RawSwiftFile.cs" />
+    <Compile Include="Swift\RawSwiftMessage.cs" />
+    <Compile Include="Swift\RawSwiftMessages.cs" />
+    <Compile Include="Swift\MT\IValidationRules.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_DEFAULT\AsMT103_DEFAULT.cs" />
+    <Compile Include="Swift\MT\103\SingleCustomerCreditTransfer_DEFAULT\AsMT103_DEFAULT.test.cs" />
+    <Compile Include="Swift\MT\103\MT103Block1ValidationRules.cs" />
+    <Compile Include="Swift\MT\103\MT103ValidationRules.cs" />
+    <Compile Include="Swift\MT\103\Tag20Validator.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\Code.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\Code.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\Sign.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\Sign.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\TimeIndication.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\TimeOffset.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\Models\TimeOffset.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\13C\TimeIndication_13C.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\20\SenderReference_20.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\23B\BankOperationCode_23B.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\23E\InstructionCode_23E.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\23E\InstructionCode_23E.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\26T\TransactionTypeCode_26T.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\32A\ValueDateCurrencyInterbankSettledAmount_32A.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\32A\ValueDateCurrencyInterbankSettledAmount_32A.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\33B\CurrencyInstructedAmount_33B.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\33B\CurrencyInstructedAmount_33B.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\36\ExchangeRate_36.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\A\Models\Account.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\A\Models\IdentifierCode.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\A\OptionA.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\A\OptionA.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\F\Models\NameAndAdress.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\F\Models\PartyIdentifier.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\F\OptionF.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\F\OptionF.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\K\OptionK.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\Options\K\OptionK.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\50a\OrderingCustomer_50a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\51A\SendingInstitution_51A.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\52a\OrderingInstitution_52a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\52a\OrderingInstitution_52a.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\53a\SendersCorrespondent_53a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\53a\SendersCorrespondent_53a.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\54a\ReceiversCorrespondent_54a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\55a\ThirdReimbursementInstitution_55a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\56a\IntermediaryInstitution_56a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT\57a\AccountWithInstitution_57a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\59a\BeneficiaryCustomer_59a.test.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\59a\BeneficiaryCustomer_59a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\59a\Options\NoLetterOption.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\59a\Options\OptionF.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_STP\70\RemittanceInformation_70.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71A\DetailsOfCharges_71a.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71A\OptionA.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71F\OptionF.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\71G\OptionG.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\72\SenterToReceiverInformation_72.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\77B\FieldSpecifications_77B.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\A\Models\IdentifierCode.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\A\Models\PartyIdentifier.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\A\OptionA.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\B\Models\Location.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\B\OptionB.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\C\OptionC.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\D\Models\NameAndAdress.cs" />
+    <Compile Include="Swift\MT\103\Tags\DEFAULT_REMIT_STP\Options\5xx\D\OptionD.cs" />
+    <Compile Include="Swift\ValidatedBlock1.cs" />
+    <Compile Include="Swift\ValidatedBlock2.cs" />
+    <Compile Include="Swift\ValidatedSwiftMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataSourceForTests\SWIFT_IN.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Swift\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Swift\MT\103\SingleCustomerCreditTransfer_DEFAULT\Tags\" />
+    <Folder Include="Swift\MT\103\Tags\REMIT_STP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Swift.Infrastructure\Swift.Infrastructure.csproj">
+      <Project>{bbe07dcd-9dff-4c43-bf4f-7abc6b9cbe73}</Project>
+      <Name>Swift.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
+</Project>

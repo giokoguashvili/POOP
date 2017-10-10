@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.IE.Web.Api", "Swift.IE.Web.Api\Swift.IE.Web.Api.csproj", "{B5DF5DFD-2302-4A89-9B59-A3B7723A9E64}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Swift.IE.Db", "Swift.IE.Db\Swift.IE.Db.sqlproj", "{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Transformation.Rules.Engine", "Swift.Transformation.Rules.Engine\Swift.Transformation.Rules.Engine.csproj", "{F9F5E385-7C34-468D-87C3-DAC6144308DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.AltaSoftware.Wrapper", "Swift.AltaSoftware.Wrapper\Swift.AltaSoftware.Wrapper.csproj", "{957903B7-B00B-4F8E-9677-07D00E388504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Integration.Domain", "Swift.Transformation.Domain\Swift.Integration.Domain.csproj", "{DF5FF35A-1534-40EF-86F5-76E53ECED5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Infrastructure", "Swift.Infrastructure\Swift.Infrastructure.csproj", "{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Transformation.Common", "Swift.Transformation.Common\Swift.Transformation.Common.csproj", "{D207EAB7-A458-4C70-86A4-6B3C244E8EF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SwiftTransformationRules", "SwiftTransformationRules", "{3DAC478D-43D5-400B-9C07-876C0B9DFC21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TBC", "TBC", "{231A48C8-6F05-494B-8745-E2712AD993F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VTB", "VTB", "{B9425264-2918-4ACA-9A10-6D5FB563F3D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT103.Transformation.Rule", "MT103.Transformation.Rule\MT103.Transformation.Rule.csproj", "{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Integration.Db.Models", "Swift.Integration.Db.Models\Swift.Integration.Db.Models.csproj", "{AF7A92EB-55F9-4DD2-A6BC-015570FF7755}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swift.Transformation.Rules", "Swift.Transformation.Rules", "{D7DC1E7F-E3DE-4F82-8480-F872F1DC2C5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swift.Transformation.Rules", "Swift.Transformation.Rules\Swift.Transformation.Rules.csproj", "{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MT103DEFAULT.TransformationRule", "MT103DEFAULT.TransformationRule\MT103DEFAULT.TransformationRule.fsproj", "{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5DF5DFD-2302-4A89-9B59-A3B7723A9E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5DF5DFD-2302-4A89-9B59-A3B7723A9E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5DF5DFD-2302-4A89-9B59-A3B7723A9E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5DF5DFD-2302-4A89-9B59-A3B7723A9E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BC8A23-53CB-4A0F-B9AC-A0654E6C80D8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F9F5E385-7C34-468D-87C3-DAC6144308DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F5E385-7C34-468D-87C3-DAC6144308DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F5E385-7C34-468D-87C3-DAC6144308DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F5E385-7C34-468D-87C3-DAC6144308DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957903B7-B00B-4F8E-9677-07D00E388504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957903B7-B00B-4F8E-9677-07D00E388504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957903B7-B00B-4F8E-9677-07D00E388504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957903B7-B00B-4F8E-9677-07D00E388504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5FF35A-1534-40EF-86F5-76E53ECED5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5FF35A-1534-40EF-86F5-76E53ECED5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5FF35A-1534-40EF-86F5-76E53ECED5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5FF35A-1534-40EF-86F5-76E53ECED5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE07DCD-9DFF-4C43-BF4F-7ABC6B9CBE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D207EAB7-A458-4C70-86A4-6B3C244E8EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D207EAB7-A458-4C70-86A4-6B3C244E8EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D207EAB7-A458-4C70-86A4-6B3C244E8EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D207EAB7-A458-4C70-86A4-6B3C244E8EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7A92EB-55F9-4DD2-A6BC-015570FF7755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7A92EB-55F9-4DD2-A6BC-015570FF7755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7A92EB-55F9-4DD2-A6BC-015570FF7755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7A92EB-55F9-4DD2-A6BC-015570FF7755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9F5E385-7C34-468D-87C3-DAC6144308DC} = {D7DC1E7F-E3DE-4F82-8480-F872F1DC2C5F}
+		{D207EAB7-A458-4C70-86A4-6B3C244E8EF3} = {D7DC1E7F-E3DE-4F82-8480-F872F1DC2C5F}
+		{231A48C8-6F05-494B-8745-E2712AD993F0} = {3DAC478D-43D5-400B-9C07-876C0B9DFC21}
+		{B9425264-2918-4ACA-9A10-6D5FB563F3D7} = {3DAC478D-43D5-400B-9C07-876C0B9DFC21}
+		{F73D7CD1-2B2A-4BBF-AB79-D2B9392D8905} = {231A48C8-6F05-494B-8745-E2712AD993F0}
+		{B78D6EBB-C48C-4A0E-9FDA-FC86790DD31C} = {D7DC1E7F-E3DE-4F82-8480-F872F1DC2C5F}
+		{E7007741-38EF-4A9B-8CEB-99AADBC7B6CC} = {231A48C8-6F05-494B-8745-E2712AD993F0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs:8080/tfs/projects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Swift.IE.Web.Api\\Swift.IE.Web.Api.csproj
+		SccProjectName1 = Swift.IE.Web.Api
+		SccLocalPath1 = Swift.IE.Web.Api
+		SccProjectUniqueName2 = Swift.IE.Db\\Swift.IE.Db.sqlproj
+		SccProjectName2 = Swift.IE.Db
+		SccLocalPath2 = Swift.IE.Db
+		SccProjectUniqueName3 = Swift.Transformation.Rules.Engine\\Swift.Transformation.Rules.Engine.csproj
+		SccProjectTopLevelParentUniqueName3 = SWIFT\u0020Integration.sln
+		SccProjectName3 = Swift.Transformation.Rules.Engine
+		SccLocalPath3 = Swift.Transformation.Rules.Engine
+		SccProjectUniqueName4 = Swift.AltaSoftware.Wrapper\\Swift.AltaSoftware.Wrapper.csproj
+		SccProjectName4 = Swift.AltaSoftware.Wrapper
+		SccLocalPath4 = Swift.AltaSoftware.Wrapper
+		SccProjectUniqueName5 = Swift.Infrastructure\\Swift.Infrastructure.csproj
+		SccProjectName5 = Swift.Infrastructure
+		SccLocalPath5 = Swift.Infrastructure
+		SccProjectUniqueName6 = Swift.Transformation.Common\\Swift.Transformation.Common.csproj
+		SccProjectTopLevelParentUniqueName6 = SWIFT\u0020Integration.sln
+		SccProjectName6 = Swift.Transformation.Common
+		SccLocalPath6 = Swift.Transformation.Common
+		SccProjectUniqueName7 = MT103.Transformation.Rule\\MT103.Transformation.Rule.csproj
+		SccProjectTopLevelParentUniqueName7 = SWIFT\u0020Integration.sln
+		SccProjectName7 = MT103.Transformation.Rule
+		SccLocalPath7 = MT103.Transformation.Rule
+		SccProjectUniqueName8 = Swift.Integration.Db.Models\\Swift.Integration.Db.Models.csproj
+		SccProjectName8 = Swift.Integration.Db.Models
+		SccLocalPath8 = Swift.Integration.Db.Models
+		SccProjectUniqueName9 = Swift.Transformation.Domain\\Swift.Integration.Domain.csproj
+		SccProjectName9 = Swift.Transformation.Domain
+		SccLocalPath9 = Swift.Transformation.Domain
+		SccProjectUniqueName10 = Swift.Transformation.Rules\\Swift.Transformation.Rules.csproj
+		SccProjectTopLevelParentUniqueName10 = SWIFT\u0020Integration.sln
+		SccProjectName10 = Swift.Transformation.Rules
+		SccLocalPath10 = Swift.Transformation.Rules
+	EndGlobalSection
+EndGlobal

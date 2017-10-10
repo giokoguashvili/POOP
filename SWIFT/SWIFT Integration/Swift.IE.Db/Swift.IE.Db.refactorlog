@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="d1368ac5-9363-4982-a8d2-0e7a918914ce" ChangeDateTime="06/20/2017 08:48:12">
+    <Property Name="ElementName" Value="[SWIFT].[ImportedMessages].[Content]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SWIFT].[ImportedMessages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RawContent" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2b93bcd5-b2cc-4366-964a-e70106865759" ChangeDateTime="07/11/2017 10:14:30">
+    <Property Name="ElementName" Value="[SWIFT].[Temp].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SWIFT].[Temp]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+</Operations>
