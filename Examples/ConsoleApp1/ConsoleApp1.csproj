@@ -48,6 +48,7 @@
     <Compile Include="DiscriminatedUnion\Union4.cs" />
     <Compile Include="DiscriminatedUnion\UnionBox.cs" />
     <Compile Include="FP_OOP_Decomposition_Example.cs" />
+    <Compile Include="PolymorphismWithDictionary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
