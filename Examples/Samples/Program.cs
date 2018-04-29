@@ -48,8 +48,8 @@ namespace Samples
                 ? new UserByName(userFromSource) 
                 : new UserByName(new UserNotFoundMessage("Not Found"));
         }) {}
-        public UserByName(UserState value) : base(value) {}
-        public UserByName(UserNotFoundMessage value) : base(value) {}
+        private UserByName(UserState value) : base(value) {}
+        private UserByName(UserNotFoundMessage value) : base(value) {}
     }
 
     public class UserByAge : TUser
@@ -61,8 +61,8 @@ namespace Samples
                 ? new UserByAge(userFromSource) 
                 : new UserByAge(new UserNotFoundMessage("Not Found"));
         }) {}
-        public UserByAge(UserState value) : base(value) {}
-        public UserByAge(UserNotFoundMessage value) : base(value) {}
+        private UserByAge(UserState value) : base(value) {}
+        private UserByAge(UserNotFoundMessage value) : base(value) {}
     }
 
     class Program
