@@ -6,6 +6,11 @@ using static System.Console;
 
 namespace Samples
 {
+    public static class FkDb
+    {
+        public static UserState User => new UserState("Gio", 25);
+    }
+
     public class UserState
     {
         public UserState(string name, int age)
@@ -43,7 +48,7 @@ namespace Samples
     {
         public UserByName(string name) : base(() =>
         {
-            var userFromSource = new UserState("Gio", 12);
+            var userFromSource = FkDb.User;
             return userFromSource.Name.Equals(name) 
                 ? new UserByName(userFromSource) 
                 : new UserByName(new UserNotFoundMessage("Not Found"));
@@ -56,7 +61,7 @@ namespace Samples
     {
         public UserByAge(int age) : base(() =>
         {
-            var userFromSource = new UserState("Gio", 25);
+            var userFromSource = FkDb.User;
             return userFromSource.Age.Equals(age) 
                 ? new UserByAge(userFromSource) 
                 : new UserByAge(new UserNotFoundMessage("Not Found"));
@@ -104,7 +109,7 @@ namespace Samples
                         e => e.Message,
                         u => u.Info()
                     )
-            ); // Gio 25
+            );
         }
     }
 }
