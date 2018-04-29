@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggregateRoots", "AggregateRoots\AggregateRoots.csproj", "{FB20E18C-7534-494E-A7E9-55F65EF19A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples", "Samples\Samples.csproj", "{9576C2DD-2CB1-4C43-9433-13E2DE62A037}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,15 @@ Global
 		{FB20E18C-7534-494E-A7E9-55F65EF19A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB20E18C-7534-494E-A7E9-55F65EF19A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB20E18C-7534-494E-A7E9-55F65EF19A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9576C2DD-2CB1-4C43-9433-13E2DE62A037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9576C2DD-2CB1-4C43-9433-13E2DE62A037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9576C2DD-2CB1-4C43-9433-13E2DE62A037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9576C2DD-2CB1-4C43-9433-13E2DE62A037}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F684E2D-1662-4002-85D8-6A61466FFE36}
 	EndGlobalSection
 EndGlobal
